@@ -1,0 +1,7 @@
+{
+  "name": "authSpike",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

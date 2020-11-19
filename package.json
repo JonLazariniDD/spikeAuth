@@ -64,7 +64,7 @@
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
       "@ionic-enterprise/auth": {
-        "AUTH_URL_SCHEME": "spikeAuthApp"
+        "AUTH_URL_SCHEME": "https://uk.gov.dvsa.cvsmobile"
       }
     },
     "platforms": [

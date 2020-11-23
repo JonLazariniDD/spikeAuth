@@ -7,16 +7,17 @@
   "engines": {
     "node": "10.18.1"
   },
-  "postinstall": "echo \"\n Angular app has been created with npx - npx ionic start <appName> blank --cordova --type=ionic-angular\" && npm run cordova:configure",
   "scripts": {
+    "postinstall": "echo \"\n Angular app has been created with npx - npx ionic start <appName> blank --cordova --type=ionic-angular\" && npm run cordova:configure && echo 'finished configuring cordova for current project'",
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "cordova:configure": "ionic cordova platform add ios@5.0.1",
+    "prepare:scripts": "ts-node ./scripts/createConfigFiles.js --appName=${npm_package_name}",
     "build:ios": "cordova build ios",
-    "serve:browser": "ionic serve",
-    "serve:ios": "ionic cordova run ios -l --external"
+    "serve:browser": "npm run prepare:scripts && ionic serve",
+    "serve:ios": "npm run prepare:scripts && ionic cordova run ios -l --external"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -35,10 +36,13 @@
     "auth": "0.0.9",
     "cordova-ios": "^5.0.1",
     "cordova-plugin-add-swift-support": "^2.0.2",
+    "dotenv": "^8.2.0",
     "ionic-angular": "3.9.9",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
+    "ts-node": "^9.0.0",
+    "yargs": "^16.1.1",
     "zone.js": "0.8.29"
   },
   "devDependencies": {

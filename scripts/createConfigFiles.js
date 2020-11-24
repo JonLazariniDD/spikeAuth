@@ -5,10 +5,12 @@ const { argv } = require('yargs')
 
 const  {appName} = argv
 
-const {env: {IONIC_HUB_ORG_ID, IONIC_HUB_PRODUCT_KEY, IONIC_HUB_APP_ID, IONIC_HUB_KEY_ID}} = process
+const {env:
+  {IONIC_HUB_ORG_ID, IONIC_HUB_PRODUCT_KEY, IONIC_HUB_APP_ID, IONIC_HUB_KEY_ID, CLIENT_ID, TENANT_ID}
+} = process
 
-const ionicConfigFile = `
-{
+
+const ionicConfigFile = `{
   "name": "${appName}",
   "integrations": {
     "cordova": {},
@@ -23,15 +25,21 @@ const ionicConfigFile = `
     }
   },
   "type": "ionic-angular"
-}
-`
+}`
+
+const environmentFile = `export const environment = {
+  CLIENT_ID: '${CLIENT_ID}',
+  TENANT_ID: '${TENANT_ID}'
+}`
 
 const createFile = async () => {
  try {
-  await fs.writeFile('./ionic.config.json', ionicConfigFile, 'utf-8')
+   await fs.writeFile('./ionic.config.json', ionicConfigFile, 'utf-8')
+   await fs.writeFile('./src/environments/environment.ts', environmentFile, 'utf-8')
  } catch (e) {
    throw e
  }
 }
 
-createFile().then(console.log('Finished writing config file\(s\)!'))
+createFile()
+  .then(console.log('Finished writing config file\(s\)!'))

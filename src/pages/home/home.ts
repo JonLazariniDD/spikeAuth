@@ -45,7 +45,7 @@ const ionicAuthOptions: IonicAuthOptions = {
   platform: 'web',
   discoveryUrl: `https://login.microsoftonline.com/${ENV.TENANT_ID}/v2.0/.well-known/openid-configuration?appid=${ENV.CLIENT_ID}`,
   redirectUri: 'http://localhost:8100/',
-  scope: 'openid',
+  scope: 'openid offline_access profile email',
   tokenStorageProvider: 'localStorage',
   logLevel: 'DEBUG'
 }

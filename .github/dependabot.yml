@@ -1,7 +1,11 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    ignore:
+      # Ignore updates to packages that start '@angular/common'
+      # Wildcards match zero or more arbitrary characters
+      - dependency-name: "@angular/common"

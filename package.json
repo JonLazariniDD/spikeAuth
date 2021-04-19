@@ -15,7 +15,8 @@
     "lint": "ionic-app-scripts lint",
     "cordova:configure": "ionic cordova platform add ios@5.0.1",
     "prepare:scripts": "ts-node ./scripts/createConfigFiles.js --appName=${npm_package_name}",
-    "build:ios": "cordova build ios",
+    "build:ios": "ionic cordova build ios",
+    "prepare": "ionic cordova prepare ios",
     "serve:browser": "npm run prepare:scripts && ionic serve",
     "serve:ios": "npm run prepare:scripts && ionic cordova run ios -l --external"
   },

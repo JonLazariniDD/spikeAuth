@@ -1,7 +1,16 @@
 {
   "name": "authSpike",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "enterprise": {
+      "keyId": 1279,
+      "productKey": "key_103ccdb58058442d8939afea23c92e6c",
+      "appId": "46de5289",
+      "orgId": "02cfb89d-b148-418c-a145-8bd32cf06a7b",
+      "registries": [
+        "@ionic-enterprise;https://registry.ionicframework.com/"
+      ]
+    }
   },
   "type": "ionic-angular"
 }

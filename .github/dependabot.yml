@@ -10,4 +10,3 @@ updates:
       # Wildcards match zero or more arbitrary characters
       - dependency-name: "@angular/common"
       - dependency-name: "@angular"
-        versions: ["5.x"]

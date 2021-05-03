@@ -43,7 +43,7 @@
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "ts-node": "^9.0.0",
-    "yargs": "^16.1.1",
+    "yargs": "^17.0.0",
     "zone.js": "0.8.29"
   },
   "devDependencies": {

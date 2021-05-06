@@ -9,4 +9,4 @@ updates:
       # Ignore updates to packages that start '@angular/common'
       # Wildcards match zero or more arbitrary characters
       - dependency-name: "@angular/common"
-      - dependency-name: "@angular"
+      - dependency-name: "@angular/**/*"

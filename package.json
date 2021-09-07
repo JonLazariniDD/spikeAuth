@@ -50,7 +50,7 @@
     "@ionic-enterprise/cordova": "^9.0.3",
     "@ionic/app-scripts": "3.2.4",
     "@ionic/cli": "^6.12.2",
-    "@types/node": "14.6.2",
+    "@types/node": "16.7.12",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.2.1",
